@@ -8,7 +8,7 @@ services:
       - reverse-proxy
     restart: always
     volumes:
-      - ./:/traefik:ro
+      - ./acme.json:/traefik/acme.json:ro
       - /opt/mailcow-dockerized/data/assets/ssl:/ssl-share:rw
       - /var/run/docker.sock:/var/run/docker.sock:rw
     environment:
