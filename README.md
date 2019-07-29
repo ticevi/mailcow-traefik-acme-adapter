@@ -24,7 +24,7 @@ certdumper:
   volumes:
     # This volume mounts the traefik root folder into the container for access
     # to the `acme.json` file
-    - /absolute/path/to/traefik-root:/traefik:ro
+    - /absolute/path/to/traefik-root/acme.json:/traefik/acme.json:ro
 
     # This volume mounts the mailcow ssl folder into the container. By default
     # this should be in your mailcow folder under "data/assets/ssl"
